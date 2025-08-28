@@ -1,0 +1,135 @@
+body {
+    font-family: "Sedan SC", serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#displayToggle {
+    position: absolute;
+    width: 500px;
+}
+
+.initialPosition {
+    left: -550px;
+    transition: left 1s ease;
+}
+
+.move-in {
+    left: 0;
+}
+
+#settings {
+    position: absolute;
+    margin-left: 30px;
+}
+
+#settingWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.boardColor {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5px);
+    grid-template-rows: repeat(8, 12.5px);
+
+    width: 100px;
+    height: 100px;
+
+    border: 6px solid #000;
+}
+
+
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 87.5px);
+    grid-template-rows: repeat(8, 87.5px);
+
+    border: 12px solid #000;
+
+    margin: 0 auto;
+
+    width: 700px;
+    height: 700px;
+
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+}
+
+.dark {
+    background-color: #516645;
+}
+
+.bright {
+    background-color: #acc49e;
+}
+
+.darkRed {
+    background-color: rgb(119, 40, 40);
+}
+
+.brightRed {
+    background-color: rgb(180, 76, 76);
+}
+
+.darkBlue {
+    background-color: rgb(54, 54, 185);
+}
+
+.brightBlue {
+    background-color: rgb(107, 107, 221);
+}
+
+.darkWhite {
+    background-color: #888888;
+}
+
+.brightWhite {
+    background-color: white;
+}
+
+.empty {
+    display: none;
+}
+
+.possibleMove {
+    position: relative;
+}
+
+.possibleMove::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: rgba(19, 18, 18, 0.5); /* Adjust opacity as needed */
+    pointer-events: none; /* Ensures clicks go through to the cell underneath */
+}
+
+#gameOver {
+    position: absolute;
+    top: 45%;
+    left: 44%;
+    text-align: center;
+
+    z-index: 3;
+}
+
+#gameOver h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+#gameOver span {
+    font-size: 40px;
+}

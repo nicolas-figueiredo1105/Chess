@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" class="css">
+
+    
+
+    <title>Chess</title>
+</head>
+<body>
+    <div id="settings">
+        <img src="setting.png" alt="" width="30" onclick="toggleDisplay()">
+        <div id="displayToggle" class="initialPosition">
+            <h2>Board Color</h2>
+            <div id="settingWrapper">
+                <h3>Red</h3>
+                <div class="boardColor" id="red" onclick="changeBoardColor('red')"></div>
+            </div>
+
+            <div id="settingWrapper">
+                <h3>Blue</h3>
+                <div class="boardColor" id="blue" onclick="changeBoardColor('blue')"></div>
+            </div>
+
+            <div id="settingWrapper">
+                <h3>Black & White</h3>
+                <div class="boardColor" id="blackWhite" onclick="changeBoardColor('white')"></div>
+            </div>
+
+            <div id="settingWrapper">
+                <h3>Default</h3>
+                <div class="boardColor" id="default" onclick="changeBoardColor('default')"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <div id="container">
+        <h1 style="font-size: 60px;">Chess</h1>
+        <div id="board" class="board"></div>
+    </div>
+    
+
+    <div id="gameOver">
+        <h1>Game Over!</h1>
+        <span id="winner"></span>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
